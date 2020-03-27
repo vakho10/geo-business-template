@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "MarkGEO-Regular";
+  src: url("../fonts/MarkGEO-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "MarkGEOBold";
+  src: url("../fonts/MarkGEOBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MarkGEOCAPSBold";
+  src: url("../fonts/MarkGEOCAPSBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MarkGEOCAPSLight";
+  src: url("../fonts/MarkGEOCAPSLight.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}

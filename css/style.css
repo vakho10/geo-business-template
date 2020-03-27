@@ -1,0 +1,49 @@
+@import "fonts.css";
+
+body {
+  margin-top: 56px;
+  
+  display: flex;
+  flex-direction: column;
+  
+  font-family: "MarkGEO-Regular";  
+}
+
+main {
+    min-height: calc(100vh - 56px);
+    flex-grow: 1;
+}
+
+.indent {
+    text-indent: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn {
+  font-family: "MarkGEOCAPSBold";
+}
+
+.navbar {
+  font-family: "MarkGEOCAPSLight";
+}
+
+.navbar-brand {
+  font-family: "MarkGEOBold";
+}
+
+.section-block {
+    margin-top: 1rem;
+}
+
+.section-block__title {
+    margin-bottom: 1rem;
+}
+
+.section-block__content {
+    margin-bottom: 1.5rem;
+}
