@@ -15,11 +15,11 @@
     <title>ქართული ფონტი</title>
 </head>
 
-<body>
+<body id="main">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Business.Ge</a>
+            <a class="navbar-brand" href="#main">Business.Ge</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">მთავარი <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#main">მთავარი <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#products">პროდუქტები</a>
@@ -46,42 +46,18 @@
         </div>
     </nav>
 
-    <main role="main" class="d-flex flex-column">
+    <main role="main" class="jumbotron-block d-flex flex-column justify-content-center">
 
-        <div class="bg-light text-dark d-flex flex-grow-1">
-            <div class="container d-flex flex-column justify-content-center mt-5 mb-5">
-                <h1 class="display-4 text-center">მოგესალმებით</h1>
+        <div class="jumbotron-block__body">
+            <div class="container mt-5 mb-5">
+                <h1 class="display-4">მოგესალმებით</h1>
                 <p class="text-justify">დავემორჩილები მოსაფიქრებლად ერთვოდა, ხოცვა ნებართვა ჩქარა სონი. იფიქრე
                     დათრგუნვად მოსავალია ძილშიც გასტეხე სწყდება გაითქვამდა შესრულების ბუნაგიდან ერთვოდა. ნებართვა
                     მზერაო
                     გრილი სარქველიდან აღიარებას ადგილამდე.</p>
-                <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">მეტის გაგება
-                        &raquo;</a>
-                </p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">მეტის გაგება
+                    &raquo;</a>
             </div>
-        </div>
-        <div class="container mt-4 mb-5">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>სათაური პირველი</h2>
-                    <p>საწოლზე უყურა მცხვენოდა მღვდელმა დაგვედგინა, ნიკოლაესა კნიაზო წირვაში ებნელება პოლონური
-                        ალმაცერად, გაიმეორებ სეირნობისას.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">დეტალების ნახვა &raquo;</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h2>სათაური მეორე</h2>
-                    <p>ღრუბლის ობლები გაჩუმდებოდა ჯულიეტა ბზიფი კვერცხი თავ. გაცოცხლდი შემაყვარებდა გაჰგუდოს დედად
-                        გიქნია კვერცხი თავ ვუთხარ.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">დეტალების ნახვა &raquo;</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h2>სათაური მესამე</h2>
-                    <p>ლორემ იპსუმ აწმყოც კანჭებზედ რევოლუციები, თვრებოდნენ გამახსენებ ბაგეები დოროგოე საწყისის,
-                        მოისველე ჩაიარა.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">დეტალების ნახვა &raquo;</a></p>
-                </div>
-            </div>
-
         </div>
 
     </main>
@@ -168,10 +144,7 @@
                 </div>
             </div>
 
-
         </section>
-
-        <hr>
 
     </section>
 
@@ -189,8 +162,6 @@
             ოფიციალურად, ციკლში გაძლიერდა ექსკურსიაზე მოსამსახურეებმა. ხილვის დათმობდა აღიარებას ეჩხუბებოდნენ შესრულების
             ოფიციალურად სადაური გარკვეული ცალის ჩქარა. გამიწვია დღიდან თვალთა ხოცვა ახლავს ასობით სცემდი დაუსტვინა
             ჩამოეფხრიწნათ.</p>
-
-        <hr>
 
     </section>
 
@@ -238,9 +209,8 @@
     </section>
 
 
-    <footer class="container">
-        <hr>
-        <p class="text-center">&copy; კომპანია 2020 | ყველა უფლება დაცულია</p>
+    <footer class="footer-block text-center">
+        &copy; კომპანია 2020 | ყველა უფლება დაცულია
     </footer>
 
     <!-- Optional JavaScript -->
@@ -254,6 +224,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <!-- Scroll smoothly -->
+    <script>
+        $(document).ready(function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

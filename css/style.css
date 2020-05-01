@@ -1,21 +1,31 @@
 @import "fonts.css";
 
-body {
-  margin-top: 56px;
-  
-  display: flex;
-  flex-direction: column;
-  
-  font-family: "MarkGEO-Regular";  
+:root {
+  --navbar-height: 56px;
 }
 
-main {
-    min-height: calc(100vh - 56px);
-    flex-grow: 1;
+body {
+  padding-top: var(--navbar-height);
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "MarkGEO-Regular";
+}
+
+.jumbotron-block {
+  min-height: calc(100vh - var(--navbar-height));
+  flex-grow: 1;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-size: cover;
+}
+
+.jumbotron-block__body {
+  background-color: var(--white);
 }
 
 .indent {
-    text-indent: 2rem;
+  text-indent: 2rem;
 }
 
 h1,
@@ -37,13 +47,25 @@ h6,
 }
 
 .section-block {
-    margin-top: 1rem;
+  margin-top: 1rem;
+}
+
+#products {
+  min-height: 100vh;
 }
 
 .section-block__title {
-    margin-bottom: 1rem;
+  margin-top: calc(var(--navbar-height) + 1rem);
+  margin-bottom: 1rem;
 }
 
 .section-block__content {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-block {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--light);
+  background-color: var(--dark);
 }
