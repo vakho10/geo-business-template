@@ -21,7 +21,7 @@ body {
 }
 
 .jumbotron-block__body {
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, .75);
 }
 
 .indent {
